@@ -1,3 +1,6 @@
+Nuxt + Contentful + Netlify でブログ作成  
+[ブログ記事](https://izm51.com/posts/nuxt-contentful-netlify-blog-making-1)
+
 # nuxt-blog-test
 
 > My gnarly Nuxt.js project
