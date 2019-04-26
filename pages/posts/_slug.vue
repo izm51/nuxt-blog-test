@@ -3,7 +3,7 @@
     <div class="single">
       <h1 class="post-title">{{ post.fields.title }}</h1>
       <p class="post-created-at">{{ formatDate(post.sys.createdAt) }}</p>
-      <div class="post-content" v-html="$md.render(post.fields.content)"></div>
+      <div class="post-content line-numbers" v-html="$md.render(post.fields.content)"></div>
     </div>
   </article>
 </template>
@@ -31,6 +31,7 @@ export default {
   },
   mounted() {
     console.log(this.post)
+    Prism.highlightAll()
   },
   methods: {
     formatDate(iso) {
@@ -50,7 +51,7 @@ article.article {
   .single {
     max-width: 900px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
     color: #222;
     border: 2px solid #444;
     border-radius: 10px;
@@ -62,6 +63,7 @@ article.article {
       text-decoration: underline;
     }
     .post-content {
+      padding: 0 0 15px;
       h1 {
         font-size: 32px;
       }
