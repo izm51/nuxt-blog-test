@@ -43,12 +43,6 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit'
   ],
-  markdownit: {
-    injected: true,
-    html: true,
-    linkify: true,
-    typography: true,
-  },
   generate: {
     routes() {
       return client
