@@ -64,6 +64,12 @@ article.article {
     }
     .post-content {
       padding: 0 0 15px;
+      position: relative;
+      z-index: 1;
+      > * {
+        position: relative;
+        z-index: 10; // h2のpadding部分より前面に来るように
+      }
       .table-of-contents {
         background: #f3f3f3;
         border: 1px solid #ccc;
