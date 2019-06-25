@@ -8,6 +8,9 @@ export default ({ app }, inject) => {
         typography: true,
     })
 
+    md.use(require("markdown-it-anchor"))
+    md.use(require("markdown-it-table-of-contents"))
+    
     const defaultRender = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
         return self.renderToken(tokens, idx, options)
     }

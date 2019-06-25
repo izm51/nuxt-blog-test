@@ -64,12 +64,39 @@ article.article {
     }
     .post-content {
       padding: 0 0 15px;
+      .table-of-contents {
+        background: #f3f3f3;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        width: fit-content;
+        ul {
+          padding-left: 24px;
+        }
+        &:before {
+          content: '目次';
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
       h1 {
         font-size: 32px;
       }
       h2 {
         font-size: 24px;
-        background: #ccc
+        margin-top: -64px;
+        padding: 80px 5px 0;
+        position: relative;
+        z-index: 1;
+        &:before {
+          content: '';
+          height: 34px;
+          width: 100%;
+          background: #d6d6d6;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          z-index: -1;
+        }
       }
       p {
         margin: 16px 0;
